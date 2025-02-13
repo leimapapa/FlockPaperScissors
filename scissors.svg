@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 107 146" class="scissors">
+	<path d="M 21 109 c -6 11 -6 20 -1 28 l 42 -78 c 0 -5 1 -10 5 -10 c 2 0 3 2 5 4 c 2 2 5 4 11 4 c 7 0 14 -4 19 -12 c 5 -8 5 -18 1 -25 c -3 -5 -7 -6 -12 -6 c -7 0 -13 4 -16 7 c -4 4 -7 10 -9 13 l -10 14 z m 74 -86 c 5 3 6 15 -1 22 c -7 6 -14 7 -19 1 c -4 -6 -2 -13 4 -19 c 7 -7 13 -6 16 -4 z" fill="darkgrey" stroke="#444" stroke-width="2" stroke-linejoin="round">
+		<animateTransform attributeName="transform" type="rotate" values="0 53.5 65; -24 53.5 65; 0 53.5 65" dur="2s" begin="0s" repeatCount="indefinite" />
+	</path>
+	<path d="M 87 109 c 5 9 5 20 0 29 l -38 -67 c -1 -2 -3 -4 -3 -7 c 0 -2 1 -3 1 -5 c 0 -2 0 -5 -1 -7 c -1 -2 -3 -3 -5 -3 c -2 0 -4 1 -6 4 c -2 3 -7 4 -11 4 c -8 0 -14 -3 -19 -12 c -5 -10 -5 -18 -1 -25.1 c 3 -4.9 8 -5.9 12 -5.9 c 8 0 14 3 18 8 c 5 7 6 10 7 12 l 10 14 l 36 61 z m -59 -60 c 7 -4 5 -15 1 -21 c -4 -6 -10 -8 -16 -6 c -6 2 -7 11 -2 20 c 3 6 10 10 17 7 z m 29 16 a 1 1 0 0 0 -7 0 a 1 1 0 0 0 7 0 z" fill="darkgrey" stroke="#444" stroke-width="2" stroke-linejoin="round">
+		<animateTransform attributeName="transform" type="rotate" values="0 53.5 65; 24 53.5 65; 0 53.5 65" dur="2s" begin="0s" repeatCount="indefinite" />
+	</path>
+</svg>
