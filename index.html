@@ -610,12 +610,19 @@
       	}
       
       	animate() {
-      		for (const boid of this.boids) {
-      			boid.run(this.boids);
+      		const interval = 1000 / frameRate; // Assume this.frameRate is updated by the slider
+      
+      		if (!this.lastTime || performance.now() - this.lastTime >= interval) {
+      			this.lastTime = performance.now();
+      			for (const boid of this.boids) {
+      				boid.run(this.boids);
+      			}
       		}
+      
       		requestAnimationFrame(() => this.animate());
       	}
       }
+      let frameRate = 60;
       
       // Define your menu items with their properties
       const menuItems = [
@@ -661,26 +668,37 @@
       const mainButton = document.getElementById("mainButton");
       const fabItems = document.getElementById("fabItems");
       
-      // Create menu items
-      menuItems.forEach((item) => {
-      	const itemElement = document.createElement("div");
-      	itemElement.className = "fab-item";
-      	const iconElement = document.createElement("div");
-      	iconElement.classList.add("fab-item-icon");
-      	iconElement.innerHTML = item.icon;
-      	const textElement = document.createElement("span");
-      	textElement.classList.add("fab-item-text");
-      	textElement.innerHTML = item.text;
-      	itemElement.appendChild(iconElement);
-      	itemElement.appendChild(textElement);
-      	itemElement.title = item.title;
-      	itemElement.addEventListener("click", () => {
-      		item.action();
-      		toggleMenu();
+      function populateMenu() {
+      	// Create menu items
+      	menuItems.forEach((item) => {
+      		const itemElement = document.createElement("div");
+      		itemElement.className = "fab-item";
+      		const iconElement = document.createElement("div");
+      		iconElement.classList.add("fab-item-icon");
+      		iconElement.innerHTML = item.icon;
+      		const textElement = document.createElement("span");
+      		textElement.classList.add("fab-item-text");
+      		textElement.innerHTML = item.text;
+      		itemElement.appendChild(iconElement);
+      		itemElement.appendChild(textElement);
+      		itemElement.title = item.title;
+      		itemElement.addEventListener("click", () => {
+      			item.action();
+      			toggleMenu();
+      		});
+      		fabItems.appendChild(itemElement);
       	});
-      	fabItems.appendChild(itemElement);
-      });
-      
+      	const frSlider = document.createElement("input");
+      	frSlider.id = "frameRateSlider";
+      	frSlider.type = "range";
+      	frSlider.min = "10";
+      	frSlider.max = "1000";
+      	frSlider.value = "60";
+      	frSlider.addEventListener("input", function () {
+      		frameRate = parseInt(this.value, 10);
+      	});
+      	fabItems.appendChild(frSlider);
+      }
       // Toggle menu function
       function toggleMenu() {
       	mainButton.classList.toggle("active");
@@ -700,6 +718,7 @@
       
       // Initialize
       document.addEventListener("DOMContentLoaded", () => {
+      	populateMenu();
       	new BoidsSimulation();
       });
     </script>
