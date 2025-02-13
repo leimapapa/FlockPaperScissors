@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 107 146" class="scissors" height="146" width="107">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 107 146" class="scissors" height="146px" width="107px">
 	<path d="M 21 109 c -6 11 -6 20 -1 28 l 42 -78 c 0 -5 1 -10 5 -10 c 2 0 3 2 5 4 c 2 2 5 4 11 4 c 7 0 14 -4 19 -12 c 5 -8 5 -18 1 -25 c -3 -5 -7 -6 -12 -6 c -7 0 -13 4 -16 7 c -4 4 -7 10 -9 13 l -10 14 z m 74 -86 c 5 3 6 15 -1 22 c -7 6 -14 7 -19 1 c -4 -6 -2 -13 4 -19 c 7 -7 13 -6 16 -4 z" fill="darkgrey" stroke="#444" stroke-width="2" stroke-linejoin="round">
 		<animateTransform attributeName="transform" type="rotate" values="0 53.5 65; -24 53.5 65; 0 53.5 65" dur="2s" begin="0s" repeatCount="indefinite" />
 	</path>
